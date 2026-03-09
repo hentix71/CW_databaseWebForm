@@ -11,7 +11,7 @@ namespace WebForm.WebForms
 {
 
 
-    public partial class User
+    public partial class ComplexWebForm2
     {
 
         /// <summary>
@@ -24,22 +24,13 @@ namespace WebForm.WebForms
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// TheatreSelector control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-
-        /// <summary>
-        /// UserDrop control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource UserDrop;
+        protected global::System.Web.UI.WebControls.DropDownList TheatreSelector;
 
         /// <summary>
         /// GridView1 control.
@@ -51,39 +42,21 @@ namespace WebForm.WebForms
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// UserGrid control.
+        /// TheatreDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource UserGrid;
+        protected global::System.Web.UI.WebControls.SqlDataSource TheatreDataSource;
 
         /// <summary>
-        /// GridView2 control.
+        /// Complex2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
-
-        /// <summary>
-        /// UserTable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource UserTable;
-
-        /// <summary>
-        /// FormView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView FormView1;
+        protected global::System.Web.UI.WebControls.SqlDataSource Complex2;
     }
 }

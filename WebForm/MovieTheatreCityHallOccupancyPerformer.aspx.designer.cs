@@ -11,7 +11,7 @@ namespace WebForm.WebForms
 {
 
 
-    public partial class Theater
+    public partial class ComplexWebForm3
     {
 
         /// <summary>
@@ -24,6 +24,15 @@ namespace WebForm.WebForms
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// MovieSelector control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList MovieSelector;
+
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>
@@ -33,30 +42,21 @@ namespace WebForm.WebForms
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// TheatreTable control.
+        /// MovieDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource TheatreTable;
+        protected global::System.Web.UI.WebControls.SqlDataSource MovieDataSource;
 
         /// <summary>
-        /// FormView1 control.
+        /// complex3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView FormView1;
-
-        /// <summary>
-        /// Chart1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.DataVisualization.Charting.Chart Chart1;
+        protected global::System.Web.UI.WebControls.SqlDataSource complex3;
     }
 }

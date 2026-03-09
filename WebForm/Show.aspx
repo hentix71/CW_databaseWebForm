@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Ticket.aspx.cs" Inherits="WebForm.Ticket" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Show.aspx.cs" Inherits="WebForm.Show" %>
 
 <!DOCTYPE html>
 
@@ -54,13 +54,13 @@
             <div class="left">
                 
                 <div class="Grid">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="TICKETID" DataSourceID="TicketTable" ForeColor="Black" height="100%"  Width="100%">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="SHOWID" DataSourceID="ShowTable" ForeColor="Black" height="100%"  Width="100%">
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                            <asp:BoundField DataField="TICKETID" HeaderText="TICKETID" ReadOnly="True" SortExpression="TICKETID" />
-                            <asp:BoundField DataField="SEATNUMBER" HeaderText="SEATNUMBER" SortExpression="SEATNUMBER" />
-                            <asp:BoundField DataField="TICKETSTATUS" HeaderText="TICKETSTATUS" SortExpression="TICKETSTATUS" />
-                            <asp:BoundField DataField="TICKETPURCHASEDATE" HeaderText="TICKETPURCHASEDATE" SortExpression="TICKETPURCHASEDATE" />
+                            <asp:BoundField DataField="SHOWID" HeaderText="SHOWID" ReadOnly="True" SortExpression="SHOWID" />
+                            <asp:BoundField DataField="SHOWDATE" HeaderText="SHOWDATE" SortExpression="SHOWDATE" />
+                            <asp:BoundField DataField="SHOWTIME" HeaderText="SHOWTIME" SortExpression="SHOWTIME" />
+                            <asp:BoundField DataField="BASEPRICE" HeaderText="BASEPRICE" SortExpression="BASEPRICE" />
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" />
                         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -72,21 +72,21 @@
                         <SortedDescendingCellStyle BackColor="#CAC9C9" />
                         <SortedDescendingHeaderStyle BackColor="#383838" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="TicketTable" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM &quot;TICKET&quot; WHERE &quot;TICKETID&quot; = :TICKETID" InsertCommand="INSERT INTO &quot;TICKET&quot; (&quot;TICKETID&quot;, &quot;SEATNUMBER&quot;, &quot;TICKETSTATUS&quot;, &quot;TICKETPURCHASEDATE&quot;) VALUES (:TICKETID, :SEATNUMBER, :TICKETSTATUS, :TICKETPURCHASEDATE)" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM &quot;TICKET&quot;" UpdateCommand="UPDATE &quot;TICKET&quot; SET &quot;SEATNUMBER&quot; = :SEATNUMBER, &quot;TICKETSTATUS&quot; = :TICKETSTATUS, &quot;TICKETPURCHASEDATE&quot; = :TICKETPURCHASEDATE WHERE &quot;TICKETID&quot; = :TICKETID">
+                    <asp:SqlDataSource ID="ShowTable" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM &quot;SHOW&quot; WHERE &quot;SHOWID&quot; = :SHOWID" InsertCommand="INSERT INTO &quot;SHOW&quot; (&quot;SHOWID&quot;, &quot;SHOWDATE&quot;, &quot;SHOWTIME&quot;, &quot;BASEPRICE&quot;) VALUES (:SHOWID, :SHOWDATE, :SHOWTIME, :BASEPRICE)" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM &quot;SHOW&quot;" UpdateCommand="UPDATE &quot;SHOW&quot; SET &quot;SHOWDATE&quot; = :SHOWDATE, &quot;SHOWTIME&quot; = :SHOWTIME, &quot;BASEPRICE&quot; = :BASEPRICE WHERE &quot;SHOWID&quot; = :SHOWID">
                         <DeleteParameters>
-                            <asp:Parameter Name="TICKETID" Type="Decimal" />
+                            <asp:Parameter Name="SHOWID" Type="Decimal" />
                         </DeleteParameters>
                         <InsertParameters>
-                            <asp:Parameter Name="TICKETID" Type="Decimal" />
-                            <asp:Parameter Name="SEATNUMBER" Type="Decimal" />
-                            <asp:Parameter Name="TICKETSTATUS" Type="String" />
-                            <asp:Parameter Name="TICKETPURCHASEDATE" Type="DateTime" />
+                            <asp:Parameter Name="SHOWID" Type="Decimal" />
+                            <asp:Parameter Name="SHOWDATE" Type="DateTime" />
+                            <asp:Parameter Name="SHOWTIME" Type="String" />
+                            <asp:Parameter Name="BASEPRICE" Type="Decimal" />
                         </InsertParameters>
                         <UpdateParameters>
-                            <asp:Parameter Name="SEATNUMBER" Type="Decimal" />
-                            <asp:Parameter Name="TICKETSTATUS" Type="String" />
-                            <asp:Parameter Name="TICKETPURCHASEDATE" Type="DateTime" />
-                            <asp:Parameter Name="TICKETID" Type="Decimal" />
+                            <asp:Parameter Name="SHOWDATE" Type="DateTime" />
+                            <asp:Parameter Name="SHOWTIME" Type="String" />
+                            <asp:Parameter Name="BASEPRICE" Type="Decimal" />
+                            <asp:Parameter Name="SHOWID" Type="Decimal" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
                     <asp:SqlDataSource ID="MovieTable" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM &quot;MOVIE&quot; WHERE &quot;MOVIEID&quot; = :MOVIEID" InsertCommand="INSERT INTO &quot;MOVIE&quot; (&quot;MOVIEID&quot;, &quot;MOVIETITLE&quot;, &quot;MOVIEDURATION&quot;, &quot;MOVIELANGUAGE&quot;, &quot;MOVIEGENRE&quot;, &quot;RELEASEDATE&quot;) VALUES (:MOVIEID, :MOVIETITLE, :MOVIEDURATION, :MOVIELANGUAGE, :MOVIEGENRE, :RELEASEDATE)" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM &quot;MOVIE&quot;" UpdateCommand="UPDATE &quot;MOVIE&quot; SET &quot;MOVIETITLE&quot; = :MOVIETITLE, &quot;MOVIEDURATION&quot; = :MOVIEDURATION, &quot;MOVIELANGUAGE&quot; = :MOVIELANGUAGE, &quot;MOVIEGENRE&quot; = :MOVIEGENRE, &quot;RELEASEDATE&quot; = :RELEASEDATE WHERE &quot;MOVIEID&quot; = :MOVIEID">
@@ -113,19 +113,19 @@
                 </div>
 
                 <div class="Form">
-                    <asp:FormView ID="FormView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="TICKETID" DataSourceID="TicketTable" ForeColor="Black" GridLines="Both" height="100%" Width="100%">
+                    <asp:FormView ID="FormView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="SHOWID" DataSourceID="ShowTable" ForeColor="Black" GridLines="Both" height="100%" Width="100%">
                         <EditItemTemplate>
-                            TICKETID:
-                            <asp:Label ID="TICKETIDLabel1" runat="server" Text='<%# Eval("TICKETID") %>' />
+                            SHOWID:
+                            <asp:Label ID="SHOWIDLabel1" runat="server" Text='<%# Eval("SHOWID") %>' />
                             <br />
-                            SEATNUMBER:
-                            <asp:TextBox ID="SEATNUMBERTextBox" runat="server" Text='<%# Bind("SEATNUMBER") %>' />
+                            SHOWDATE:
+                            <asp:TextBox ID="SHOWDATETextBox" runat="server" Text='<%# Bind("SHOWDATE") %>' />
                             <br />
-                            TICKETSTATUS:
-                            <asp:TextBox ID="TICKETSTATUSTextBox" runat="server" Text='<%# Bind("TICKETSTATUS") %>' />
+                            SHOWTIME:
+                            <asp:TextBox ID="SHOWTIMETextBox" runat="server" Text='<%# Bind("SHOWTIME") %>' />
                             <br />
-                            TICKETPURCHASEDATE:
-                            <asp:TextBox ID="TICKETPURCHASEDATETextBox" runat="server" Text='<%# Bind("TICKETPURCHASEDATE") %>' />
+                            BASEPRICE:
+                            <asp:TextBox ID="BASEPRICETextBox" runat="server" Text='<%# Bind("BASEPRICE") %>' />
                             <br />
                             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
@@ -134,33 +134,33 @@
                         <FooterStyle BackColor="#CCCCCC" />
                         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                         <InsertItemTemplate>
-                            TICKETID:
-                            <asp:TextBox ID="TICKETIDTextBox" runat="server" Text='<%# Bind("TICKETID") %>' />
+                            SHOWID:
+                            <asp:TextBox ID="SHOWIDTextBox" runat="server" Text='<%# Bind("SHOWID") %>' />
                             <br />
-                            SEATNUMBER:
-                            <asp:TextBox ID="SEATNUMBERTextBox" runat="server" Text='<%# Bind("SEATNUMBER") %>' />
+                            SHOWDATE:
+                            <asp:TextBox ID="SHOWDATETextBox" runat="server" Text='<%# Bind("SHOWDATE") %>' />
                             <br />
-                            TICKETSTATUS:
-                            <asp:TextBox ID="TICKETSTATUSTextBox" runat="server" Text='<%# Bind("TICKETSTATUS") %>' />
+                            SHOWTIME:
+                            <asp:TextBox ID="SHOWTIMETextBox" runat="server" Text='<%# Bind("SHOWTIME") %>' />
                             <br />
-                            TICKETPURCHASEDATE:
-                            <asp:TextBox ID="TICKETPURCHASEDATETextBox" runat="server" Text='<%# Bind("TICKETPURCHASEDATE") %>' />
+                            BASEPRICE:
+                            <asp:TextBox ID="BASEPRICETextBox" runat="server" Text='<%# Bind("BASEPRICE") %>' />
                             <br />
                             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                         </InsertItemTemplate>
                         <ItemTemplate>
-                            TICKETID:
-                            <asp:Label ID="TICKETIDLabel" runat="server" Text='<%# Eval("TICKETID") %>' />
+                            SHOWID:
+                            <asp:Label ID="SHOWIDLabel" runat="server" Text='<%# Eval("SHOWID") %>' />
                             <br />
-                            SEATNUMBER:
-                            <asp:Label ID="SEATNUMBERLabel" runat="server" Text='<%# Bind("SEATNUMBER") %>' />
+                            SHOWDATE:
+                            <asp:Label ID="SHOWDATELabel" runat="server" Text='<%# Bind("SHOWDATE") %>' />
                             <br />
-                            TICKETSTATUS:
-                            <asp:Label ID="TICKETSTATUSLabel" runat="server" Text='<%# Bind("TICKETSTATUS") %>' />
+                            SHOWTIME:
+                            <asp:Label ID="SHOWTIMELabel" runat="server" Text='<%# Bind("SHOWTIME") %>' />
                             <br />
-                            TICKETPURCHASEDATE:
-                            <asp:Label ID="TICKETPURCHASEDATELabel" runat="server" Text='<%# Bind("TICKETPURCHASEDATE") %>' />
+                            BASEPRICE:
+                            <asp:Label ID="BASEPRICELabel" runat="server" Text='<%# Bind("BASEPRICE") %>' />
                             <br />
                             <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
                             &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
@@ -174,9 +174,9 @@
             </div>
             
             <div class="Graph">
-                <asp:Chart ID="Chart1" runat="server" DataSourceID="TicketTable" Width="500px">
+                <asp:Chart ID="Chart1" runat="server" DataSourceID="ShowTable" Width="500px">
                     <Series>
-                        <asp:Series Name="Series1" ChartType="Point" XValueMember="TICKETSTATUS" YValueMembers="TICKETPURCHASEDATE"></asp:Series>
+                        <asp:Series Name="Series1" XValueMember="BASEPRICE" YValueMembers="BASEPRICE"></asp:Series>
                     </Series>
                     <ChartAreas>
                         <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
