@@ -169,22 +169,18 @@
                         <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
                         <RowStyle BackColor="White" />
                     </asp:FormView>
-                </div>
- 
-            </div>
-            
-            <div class="Graph">
-                <asp:Chart ID="Chart1" runat="server" DataSourceID="ShowTable" Width="500px">
-                    <Series>
-                        <asp:Series Name="Series1" XValueMember="BASEPRICE" YValueMembers="BASEPRICE"></asp:Series>
-                    </Series>
-                    <ChartAreas>
-                        <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-                    </ChartAreas>
-                </asp:Chart>
-            </div>
-
         </div>
+        </div>
+
+        <style>
+            .left {
+                width: 100%;
+            }
+            
+            .Graph {
+                display: none;
+            }
+        </style>
     </form>
 </body>
 </html>

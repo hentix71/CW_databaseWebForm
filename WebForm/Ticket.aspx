@@ -216,37 +216,6 @@
             background: #c0392b;
         }
         
-        .chart-container {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 50px;
-        }
-        
-        .chart-container h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 22px;
-            display: flex;
-            align-items: center;
-            font-weight: 600;
-        }
-        
-        .chart-container h2:before {
-            content: '';
-            width: 4px;
-            height: 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
-            margin-right: 12px;
-        }
-        
-        .chart-wrapper {
-            text-align: center;
-            overflow-x: auto;
-        }
-        
         footer {
             background: #2c3e50;
             color: white;
@@ -415,22 +384,7 @@
                         </ItemTemplate>
                     </asp:FormView>
                 </div>
-            </div>
-
-            <!-- Chart Section -->
-            <div class="chart-container">
-                <h2>Ticket Status Distribution</h2>
-                <div class="chart-wrapper">
-                    <asp:Chart ID="Chart1" runat="server" DataSourceID="TicketTable" Width="800px" Height="400px">
-                        <Series>
-                            <asp:Series Name="Ticket Count" ChartType="Pie" XValueMember="TICKETSTATUS" YValueMembers="TICKETID"></asp:Series>
-                        </Series>
-                        <ChartAreas>
-                            <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-                        </ChartAreas>
-                    </asp:Chart>
-                </div>
-            </div>
+        </div>
         </div>
 
         <footer>
