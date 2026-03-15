@@ -298,30 +298,8 @@
 
                 <!-- Form View Section -->
                 <div class="section">
-                    <h2>Edit / Create User</h2>
-                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="USERID" DataSourceID="UserTable">
-                        <EditItemTemplate>
-                            <div class="form-group">
-                                <label>User ID:</label>
-                                <asp:Label ID="USERIDLabel1" runat="server" Text='<%# Eval("USERID") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Username:</label>
-                                <asp:TextBox ID="USERNAMETextBox" runat="server" Text='<%# Bind("USERNAME") %>' />
-                            </div>
-                            <div class="form-group">
-                                <label>Address:</label>
-                                <asp:TextBox ID="ADDRESSTextBox" runat="server" Text='<%# Bind("ADDRESS") %>' />
-                            </div>
-                            <div class="form-group">
-                                <label>Phone Number:</label>
-                                <asp:TextBox ID="Phone_NumberTextBox" runat="server" Text='<%# Bind("Phone_Number") %>' />
-                            </div>
-                            <div class="button-group">
-                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" CssClass="btn btn-primary" Text="Update" />
-                                <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-secondary" Text="Cancel" />
-                            </div>
-                        </EditItemTemplate>
+                    <h2>Add New User</h2>
+                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="USERID" DataSourceID="UserTable" DefaultMode="Insert">
                         <InsertItemTemplate>
                             <div class="form-group">
                                 <label>User ID:</label>
@@ -340,33 +318,10 @@
                                 <asp:TextBox ID="Phone_NumberTextBox" runat="server" Text='<%# Bind("Phone_Number") %>' />
                             </div>
                             <div class="button-group">
-                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Insert" />
+                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Add User" />
                                 <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-secondary" Text="Cancel" />
                             </div>
                         </InsertItemTemplate>
-                        <ItemTemplate>
-                            <div class="form-group">
-                                <label>User ID:</label>
-                                <asp:Label ID="USERIDLabel" runat="server" Text='<%# Eval("USERID") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Username:</label>
-                                <asp:Label ID="USERNAMELabel" runat="server" Text='<%# Bind("USERNAME") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Address:</label>
-                                <asp:Label ID="ADDRESSLabel" runat="server" Text='<%# Bind("ADDRESS") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Phone Number:</label>
-                                <asp:Label ID="Phone_NumberLabel" runat="server" Text='<%# Bind("Phone_Number") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="button-group">
-                                <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" CssClass="btn btn-primary" Text="Edit" />
-                                <asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" CssClass="btn btn-danger" Text="Delete" />
-                                <asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" CssClass="btn btn-primary" Text="New" />
-                            </div>
-                        </ItemTemplate>
                     </asp:FormView>
                 </div>
         </div>

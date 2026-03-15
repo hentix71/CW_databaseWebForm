@@ -313,30 +313,8 @@
 
                 <!-- Form View Section -->
                 <div class="section">
-                    <h2>Edit / Create Ticket</h2>
-                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="TICKETID" DataSourceID="TicketTable">
-                        <EditItemTemplate>
-                            <div class="form-group">
-                                <label>Ticket ID:</label>
-                                <asp:Label ID="TICKETIDLabel1" runat="server" Text='<%# Eval("TICKETID") %>' CssClass="form-display" />
-                            </div>
-                            <div class="form-group">
-                                <label>Seat Number:</label>
-                                <asp:TextBox ID="SEATNUMBERTextBox" runat="server" Text='<%# Bind("SEATNUMBER") %>' />
-                            </div>
-                            <div class="form-group">
-                                <label>Status:</label>
-                                <asp:TextBox ID="TICKETSTATUSTextBox" runat="server" Text='<%# Bind("TICKETSTATUS") %>' />
-                            </div>
-                            <div class="form-group">
-                                <label>Purchase Date:</label>
-                                <asp:TextBox ID="TICKETPURCHASEDATETextBox" runat="server" Text='<%# Bind("TICKETPURCHASEDATE") %>' />
-                            </div>
-                            <div class="button-group">
-                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" CssClass="btn btn-primary" Text="Update" />
-                                <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-secondary" Text="Cancel" />
-                            </div>
-                        </EditItemTemplate>
+                    <h2>Add New Ticket</h2>
+                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="TICKETID" DataSourceID="TicketTable" DefaultMode="Insert">
                         <InsertItemTemplate>
                             <div class="form-group">
                                 <label>Ticket ID:</label>
@@ -355,33 +333,10 @@
                                 <asp:TextBox ID="TICKETPURCHASEDATETextBox" runat="server" Text='<%# Bind("TICKETPURCHASEDATE") %>' />
                             </div>
                             <div class="button-group">
-                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Insert" />
+                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Add Ticket" />
                                 <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-secondary" Text="Cancel" />
                             </div>
                         </InsertItemTemplate>
-                        <ItemTemplate>
-                            <div class="form-group">
-                                <label>Ticket ID:</label>
-                                <asp:Label ID="TICKETIDLabel" runat="server" Text='<%# Eval("TICKETID") %>' CssClass="form-display" />
-                            </div>
-                            <div class="form-group">
-                                <label>Seat Number:</label>
-                                <asp:Label ID="SEATNUMBERLabel" runat="server" Text='<%# Bind("SEATNUMBER") %>' CssClass="form-display" />
-                            </div>
-                            <div class="form-group">
-                                <label>Status:</label>
-                                <asp:Label ID="TICKETSTATUSLabel" runat="server" Text='<%# Bind("TICKETSTATUS") %>' CssClass="form-display" />
-                            </div>
-                            <div class="form-group">
-                                <label>Purchase Date:</label>
-                                <asp:Label ID="TICKETPURCHASEDATELabel" runat="server" Text='<%# Bind("TICKETPURCHASEDATE") %>' CssClass="form-display" />
-                            </div>
-                            <div class="button-group">
-                                <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" CssClass="btn btn-primary" Text="Edit" />
-                                <asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" CssClass="btn btn-danger" Text="Delete" />
-                                <asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" CssClass="btn btn-primary" Text="New" />
-                            </div>
-                        </ItemTemplate>
                     </asp:FormView>
                 </div>
         </div>

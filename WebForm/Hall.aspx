@@ -293,63 +293,26 @@
 
                 <!-- Form View Section -->
                 <div class="section">
-                    <h2>Edit / Create Hall</h2>
-                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="HALLID" DataSourceID="HallTable">
-                        <EditItemTemplate>
-                            <div class="form-group">
-                                <label>HALLID:</label>
-                                <asp:Label ID="HALLIDLabel1" runat="server" Text='<%# Eval("HALLID") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>HALLNAME:</label>
-                                <asp:TextBox ID="HALLNAMETextBox" runat="server" Text='<%# Bind("HALLNAME") %>' />
-                            </div>
-                            <div class="form-group">
-                                <label>HALLCAPACITY:</label>
-                                <asp:TextBox ID="HALLCAPACITYTextBox" runat="server" Text='<%# Bind("HALLCAPACITY") %>' />
-                            </div>
-                            <div class="button-group">
-                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" CssClass="btn btn-primary" Text="Update" />
-                                <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-secondary" Text="Cancel" />
-                            </div>
-                        </EditItemTemplate>
+                    <h2>Add New Hall</h2>
+                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="HALLID" DataSourceID="HallTable" DefaultMode="Insert">
                         <InsertItemTemplate>
                             <div class="form-group">
-                                <label>HALLID:</label>
+                                <label>Hall ID:</label>
                                 <asp:TextBox ID="HALLIDTextBox" runat="server" Text='<%# Bind("HALLID") %>' />
                             </div>
                             <div class="form-group">
-                                <label>HALLNAME:</label>
+                                <label>Hall Name:</label>
                                 <asp:TextBox ID="HALLNAMETextBox" runat="server" Text='<%# Bind("HALLNAME") %>' />
                             </div>
                             <div class="form-group">
-                                <label>HALLCAPACITY:</label>
+                                <label>Hall Capacity:</label>
                                 <asp:TextBox ID="HALLCAPACITYTextBox" runat="server" Text='<%# Bind("HALLCAPACITY") %>' />
                             </div>
                             <div class="button-group">
-                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Insert" />
+                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Add Hall" />
                                 <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-secondary" Text="Cancel" />
                             </div>
                         </InsertItemTemplate>
-                        <ItemTemplate>
-                            <div class="form-group">
-                                <label>HALLID:</label>
-                                <asp:Label ID="HALLIDLabel" runat="server" Text='<%# Eval("HALLID") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>HALLNAME:</label>
-                                <asp:Label ID="HALLNAMELabel" runat="server" Text='<%# Bind("HALLNAME") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>HALLCAPACITY:</label>
-                                <asp:Label ID="HALLCAPACITYLabel" runat="server" Text='<%# Bind("HALLCAPACITY") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="button-group">
-                                <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" CssClass="btn btn-primary" Text="Edit" />
-                                <asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" CssClass="btn btn-danger" Text="Delete" />
-                                <asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" CssClass="btn btn-primary" Text="New" />
-                            </div>
-                        </ItemTemplate>
                     </asp:FormView>
                 </div>
         </div>

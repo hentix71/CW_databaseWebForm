@@ -294,26 +294,8 @@
 
                 <!-- Form View Section -->
                 <div class="section">
-                    <h2>Edit / Create Theatre</h2>
-                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="THEATREID" DataSourceID="TheatreTable">
-                        <EditItemTemplate>
-                            <div class="form-group">
-                                <label>Theatre ID:</label>
-                                <asp:Label ID="THEATREIDLabel1" runat="server" Text='<%# Eval("THEATREID") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Theatre Name:</label>
-                                <asp:TextBox ID="THEATRENAMETextBox" runat="server" Text='<%# Bind("THEATRENAME") %>' />
-                            </div>
-                            <div class="form-group">
-                                <label>City/Hall:</label>
-                                <asp:TextBox ID="THEATRECITYHALLTextBox" runat="server" Text='<%# Bind("THEATRECITYHALL") %>' />
-                            </div>
-                            <div class="button-group">
-                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" CssClass="btn btn-primary" Text="Update" />
-                                <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-secondary" Text="Cancel" />
-                            </div>
-                        </EditItemTemplate>
+                    <h2>Add New Theatre</h2>
+                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="THEATREID" DataSourceID="TheatreTable" DefaultMode="Insert">
                         <InsertItemTemplate>
                             <div class="form-group">
                                 <label>Theatre ID:</label>
@@ -328,29 +310,10 @@
                                 <asp:TextBox ID="THEATRECITYHALLTextBox" runat="server" Text='<%# Bind("THEATRECITYHALL") %>' />
                             </div>
                             <div class="button-group">
-                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Insert" />
+                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Add Theatre" />
                                 <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-secondary" Text="Cancel" />
                             </div>
                         </InsertItemTemplate>
-                        <ItemTemplate>
-                            <div class="form-group">
-                                <label>Theatre ID:</label>
-                                <asp:Label ID="THEATREIDLabel" runat="server" Text='<%# Eval("THEATREID") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Theatre Name:</label>
-                                <asp:Label ID="THEATRENAMELabel" runat="server" Text='<%# Bind("THEATRENAME") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>City/Hall:</label>
-                                <asp:Label ID="THEATRECITYHALLLabel" runat="server" Text='<%# Bind("THEATRECITYHALL") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="button-group">
-                                <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" CssClass="btn btn-primary" Text="Edit" />
-                                <asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" CssClass="btn btn-danger" Text="Delete" />
-                                <asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" CssClass="btn btn-primary" Text="New" />
-                            </div>
-                        </ItemTemplate>
                     </asp:FormView>
                 </div>
         </div>

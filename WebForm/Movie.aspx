@@ -303,40 +303,8 @@
 
                 <!-- Form View Section -->
                 <div class="section">
-                    <h2>Edit / Create Movie</h2>
-                    <asp:FormView ID="FormView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MOVIEID" DataSourceID="MovieTable" GridLines="Vertical">
-                        <EditItemTemplate>
-                            <div class="form-group">
-                                <label>Movie ID:</label>
-                                <asp:Label ID="MOVIEIDLabel1" runat="server" Text='<%# Eval("MOVIEID") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Title:</label>
-                                <asp:TextBox ID="MOVIETITLETextBox" runat="server" Text='<%# Bind("MOVIETITLE") %>' />
-                            </div>
-                            <div class="form-group">
-                                <label>Duration:</label>
-                                <asp:TextBox ID="MOVIEDURATIONTextBox" runat="server" Text='<%# Bind("MOVIEDURATION") %>' />
-                            </div>
-                            <div class="form-group">
-                                <label>Language:</label>
-                                <asp:TextBox ID="MOVIELANGUAGETextBox" runat="server" Text='<%# Bind("MOVIELANGUAGE") %>' />
-                            </div>
-                            <div class="form-group">
-                                <label>Genre:</label>
-                                <asp:TextBox ID="MOVIEGENRETextBox" runat="server" Text='<%# Bind("MOVIEGENRE") %>' />
-                            </div>
-                            <div class="form-group">
-                                <label>Release Date:</label>
-                                <asp:TextBox ID="RELEASEDATETextBox" runat="server" Text='<%# Bind("RELEASEDATE") %>' />
-                            </div>
-                            <div class="button-group">
-                                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" CssClass="btn btn-primary" Text="Update" />
-                                <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-secondary" Text="Cancel" />
-                            </div>
-                        </EditItemTemplate>
-                        <FooterStyle BackColor="#CCCCCC" />
-                        <HeaderStyle BackColor="#2c3e50" Font-Bold="True" ForeColor="White" />
+                    <h2>Add New Movie</h2>
+                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MOVIEID" DataSourceID="MovieTable" DefaultMode="Insert">
                         <InsertItemTemplate>
                             <div class="form-group">
                                 <label>Movie ID:</label>
@@ -363,43 +331,10 @@
                                 <asp:TextBox ID="RELEASEDATETextBox" runat="server" Text='<%# Bind("RELEASEDATE") %>' />
                             </div>
                             <div class="button-group">
-                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Insert" />
+                                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Add Movie" />
                                 <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-secondary" Text="Cancel" />
                             </div>
                         </InsertItemTemplate>
-                        <ItemTemplate>
-                            <div class="form-group">
-                                <label>Movie ID:</label>
-                                <asp:Label ID="MOVIEIDLabel" runat="server" Text='<%# Eval("MOVIEID") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Title:</label>
-                                <asp:Label ID="MOVIETITLELabel" runat="server" Text='<%# Bind("MOVIETITLE") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Duration:</label>
-                                <asp:Label ID="MOVIEDURATIONLabel" runat="server" Text='<%# Bind("MOVIEDURATION") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Language:</label>
-                                <asp:Label ID="MOVIELANGUAGELabel" runat="server" Text='<%# Bind("MOVIELANGUAGE") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Genre:</label>
-                                <asp:Label ID="MOVIEGENRELabel" runat="server" Text='<%# Bind("MOVIEGENRE") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="form-group">
-                                <label>Release Date:</label>
-                                <asp:Label ID="RELEASEDATELabel" runat="server" Text='<%# Bind("RELEASEDATE") %>' style="display: block; padding: 10px; background: #f8f9fa; border-radius: 5px;" />
-                            </div>
-                            <div class="button-group">
-                                <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" CssClass="btn btn-primary" Text="Edit" />
-                                <asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" CssClass="btn btn-danger" Text="Delete" />
-                                <asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" CssClass="btn btn-primary" Text="New" />
-                            </div>
-                        </ItemTemplate>
-                        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#f8f9fa" />
                     </asp:FormView>
                 </div>
         </div>
