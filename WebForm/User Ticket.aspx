@@ -295,10 +295,10 @@
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <div>
-                    <h1>?? User Booking Details</h1>
+                    <h1>User Booking Details</h1>
                     <p>Manage and view user booking information and ticket details</p>
                 </div>
-                <a href="Dashboard.aspx" style="background: rgba(255, 255, 255, 0.2); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 14px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.3);">? Back to Dashboard</a>
+                <a href="Dashboard.aspx" style="background: rgba(255, 255, 255, 0.2); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 14px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.3);">Back to Dashboard</a>
             </div>
         </div>
     </header>
@@ -332,7 +332,7 @@
                     </Columns>
                     <EmptyDataTemplate>
                         <div class="empty-message">
-                            <p>?? No booking records found. Please select a user from the dropdown above.</p>
+                            <p>No booking records found. Please select a user from the dropdown above.</p>
                         </div>
                     </EmptyDataTemplate>
                 </asp:GridView>

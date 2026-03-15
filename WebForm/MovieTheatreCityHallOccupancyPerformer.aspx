@@ -252,10 +252,10 @@
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <div>
-                    <h1>?? Top Theatre City Hall Occupancy</h1>
+                    <h1>Top Theatre City Hall Occupancy</h1>
                     <p>View the top 3 theatre city halls with maximum seat occupancy percentage for selected movies</p>
                 </div>
-                <a href="Dashboard.aspx" style="background: rgba(255, 255, 255, 0.2); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 14px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.3);">? Back to Dashboard</a>
+                <a href="Dashboard.aspx" style="background: rgba(255, 255, 255, 0.2); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 14px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.3);">Back to Dashboard</a>
             </div>
         </div>
     </header>
@@ -297,7 +297,7 @@
                     </Columns>
                     <EmptyDataTemplate>
                         <div class="empty-message">
-                            <p>?? No occupancy data found. Please select a movie from the dropdown above.</p>
+                            <p>No occupancy data found. Please select a movie from the dropdown above.</p>
                         </div>
                     </EmptyDataTemplate>
                 </asp:GridView>
