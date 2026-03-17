@@ -336,6 +336,18 @@
                             <a href="User.aspx" class="module-button">Access Module</a>
                         </div>
                     </div>
+
+                    <!-- Show Management -->
+                    <div class="module-card">
+                        <div class="module-header">
+                            <h3>Show Management</h3>
+                            <p>Manage cinema shows</p>
+                        </div>
+                        <div class="module-body">
+                            <p>Create, view, and manage show details including show dates, times, and base prices.</p>
+                            <a href="Show.aspx" class="module-button">Access Module</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
