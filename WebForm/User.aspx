@@ -178,6 +178,13 @@
             color: white;
         }
         
+        .validation-error {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 4px;
+            display: block;
+        }
+        
         footer {
             background: #2c3e50;
             color: white;
@@ -278,18 +285,34 @@
                             <div class="form-group">
                                 <label>User ID:</label>
                                 <asp:TextBox ID="USERIDTextBox" runat="server" Text='<%# Bind("USERID") %>' />
+                                <asp:RequiredFieldValidator ID="USERIDValidator" runat="server" 
+                                    ControlToValidate="USERIDTextBox" 
+                                    ErrorMessage="User ID is required" 
+                                    CssClass="validation-error" />
                             </div>
                             <div class="form-group">
                                 <label>Username:</label>
                                 <asp:TextBox ID="USERNAMETextBox" runat="server" Text='<%# Bind("USERNAME") %>' />
+                                <asp:RequiredFieldValidator ID="USERNAMEValidator" runat="server" 
+                                    ControlToValidate="USERNAMETextBox" 
+                                    ErrorMessage="Username is required" 
+                                    CssClass="validation-error" />
                             </div>
                             <div class="form-group">
                                 <label>Address:</label>
                                 <asp:TextBox ID="ADDRESSTextBox" runat="server" Text='<%# Bind("ADDRESS") %>' />
+                                <asp:RequiredFieldValidator ID="ADDRESSValidator" runat="server" 
+                                    ControlToValidate="ADDRESSTextBox" 
+                                    ErrorMessage="Address is required" 
+                                    CssClass="validation-error" />
                             </div>
                             <div class="form-group">
                                 <label>Phone Number:</label>
                                 <asp:TextBox ID="Phone_NumberTextBox" runat="server" Text='<%# Bind("Phone_Number") %>' />
+                                <asp:RequiredFieldValidator ID="PhoneValidator" runat="server" 
+                                    ControlToValidate="Phone_NumberTextBox" 
+                                    ErrorMessage="Phone Number is required" 
+                                    CssClass="validation-error" />
                             </div>
                             <div class="button-group">
                                 <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" CssClass="btn btn-primary" Text="Add User" />
