@@ -45,13 +45,7 @@
             border-radius: 5px;
             text-decoration: none;
             font-size: 14px;
-            transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .nav-link:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
         }
         
         .container {
@@ -112,11 +106,6 @@
         
         table tbody tr {
             border-bottom: 1px solid #ecf0f1;
-            transition: background-color 0.3s ease;
-        }
-        
-        table tbody tr:hover {
-            background-color: #f8f9fa;
         }
         
         table tbody tr:nth-child(even) {
@@ -149,7 +138,6 @@
             border: 2px solid #ecf0f1;
             border-radius: 5px;
             font-size: 14px;
-            transition: all 0.3s ease;
         }
         
         .form-group input:focus,
@@ -173,7 +161,6 @@
             cursor: pointer;
             border: none;
             font-size: 14px;
-            transition: all 0.3s ease;
         }
         
         .btn-primary {
@@ -181,27 +168,14 @@
             color: white;
         }
         
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-        }
-        
         .btn-secondary {
             background: #ecf0f1;
             color: #2c3e50;
         }
         
-        .btn-secondary:hover {
-            background: #bdc3c7;
-        }
-        
         .btn-danger {
             background: #e74c3c;
             color: white;
-        }
-        
-        .btn-danger:hover {
-            background: #c0392b;
         }
         
         footer {

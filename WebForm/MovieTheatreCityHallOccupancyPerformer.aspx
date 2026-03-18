@@ -74,11 +74,6 @@
             color: #2c3e50;
             background-color: white;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .filter-section select:hover {
-            border-color: #667eea;
         }
         
         .filter-section select:focus {
@@ -135,11 +130,6 @@
         
         table tbody tr {
             border-bottom: 1px solid #ecf0f1;
-            transition: background-color 0.3s ease;
-        }
-        
-        table tbody tr:hover {
-            background-color: #f8f9fa;
         }
         
         table tbody tr:nth-child(even) {
@@ -165,7 +155,6 @@
         .occupancy-fill {
             height: 100%;
             background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            transition: width 0.3s ease;
         }
         
         /* Occupancy Percentage Styling */

@@ -82,11 +82,6 @@
             color: #2c3e50;
             background-color: white;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .filter-section select:hover {
-            border-color: #667eea;
         }
         
         .filter-section select:focus {
@@ -151,11 +146,6 @@
             border-radius: 5px;
             font-size: 14px;
             color: #2c3e50;
-            transition: all 0.3s ease;
-        }
-        
-        .form-group input[type="text"]:hover {
-            border-color: #667eea;
         }
         
         .form-group input[type="text"]:focus {
@@ -176,7 +166,6 @@
             text-decoration: none;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
             border: none;
             font-size: 14px;
         }
@@ -186,18 +175,9 @@
             color: white;
         }
         
-        .button-group .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-        }
-        
         .button-group .btn-secondary {
             background-color: #ecf0f1;
             color: #2c3e50;
-        }
-        
-        .button-group .btn-secondary:hover {
-            background-color: #bdc3c7;
         }
         
         /* GridView Styling */
@@ -221,11 +201,6 @@
         
         table tbody tr {
             border-bottom: 1px solid #ecf0f1;
-            transition: background-color 0.3s ease;
-        }
-        
-        table tbody tr:hover {
-            background-color: #f8f9fa;
         }
         
         table tbody tr:nth-child(even) {
@@ -298,7 +273,7 @@
                     <h1>User Booking Details</h1>
                     <p>Manage and view user booking information and ticket details</p>
                 </div>
-                <a href="Dashboard.aspx" style="background: rgba(255, 255, 255, 0.2); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 14px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.3);">Back to Dashboard</a>
+                <a href="Dashboard.aspx" style="background: rgba(255, 255, 255, 0.2); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 14px; border: 1px solid rgba(255, 255, 255, 0.3);">Back to Dashboard</a>
             </div>
         </div>
     </header>
