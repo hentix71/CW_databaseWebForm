@@ -185,6 +185,16 @@
             display: block;
         }
         
+        .error-message {
+            background-color: #fadbd8;
+            border: 1px solid #e74c3c;
+            border-left: 4px solid #e74c3c;
+            color: #c0392b;
+            padding: 12px 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
         footer {
             background: #2c3e50;
             color: white;
@@ -239,7 +249,7 @@
                 <!-- Grid View Section -->
                 <div class="section">
                     <h2>User Records</h2>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="USERID" DataSourceID="UserTable" AllowSorting="True" GridLines="Vertical">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="USERID" DataSourceID="UserTable" AllowSorting="True" GridLines="Vertical" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" OnRowCommand="GridView1_RowCommand">
                         <AlternatingRowStyle BackColor="#F7F7F7" />
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -280,7 +290,8 @@
                 <!-- Form View Section -->
                 <div class="section">
                     <h2>Add New User</h2>
-                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="USERID" DataSourceID="UserTable" DefaultMode="Insert">
+                    <asp:Label ID="ErrorLabel" runat="server" CssClass="error-message" Visible="False"></asp:Label>
+                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="USERID" DataSourceID="UserTable" DefaultMode="Insert" OnItemInserted="FormView1_ItemInserted">
                         <InsertItemTemplate>
                             <div class="form-group">
                                 <label>User ID:</label>
